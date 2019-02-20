@@ -1,5 +1,5 @@
 {
-    "name": "reason-mui-binding-generator",
+    "name": "@jsiebern/mui-binding-generator",
     "version": "0.0.1",
     "description": "Reason binding generator for material-ui v1",
     "scripts": {
@@ -7,7 +7,6 @@
         "parse": "ts-node --project ./tsconfig.json --files ./src/index.ts; ./node_modules/.bin/bsrefmt --in-place output/reason/*.re; bsb -make-world; ts-node --files ./src/helpers/clean-js-output.ts;",
         "theme": "cd ../_fork/material-ui; typescript-json-schema ./tsconfig.json Theme --ignoreErrors --excludePrivate --required -o test.json"
     },
-    "repository": "git@github.com:jsiebern/reason-mui-binding-generator.git",
     "author": "Jonathan Siebern <jsiebern88@gmail.com>",
     "license": "MIT",
     "devDependencies": {

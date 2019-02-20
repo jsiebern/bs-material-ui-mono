@@ -234,6 +234,18 @@
    * 3. It's useful to have a centralized inventory of all projects and their important metadata.
    */
   "projects": [
+    {
+      "packageName": "@jsiebern/mui-binding-generator",
+      "projectFolder": "tools/binding-generator"
+    },
+    {
+      "packageName": "@jsiebern/mui-component-extractor",
+      "projectFolder": "tools/component-extractor"
+    },
+    {
+      "packageName": "@jsiebern/json-schema-parser",
+      "projectFolder": "tools/json-schema-parser"
+    }
     // {
     //   /**
     //    * The NPM package name of the project (must match package.json)

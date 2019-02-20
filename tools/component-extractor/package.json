@@ -1,5 +1,5 @@
 {
-  "name": "extract",
+  "name": "@jsiebern/mui-component-extractor",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -47,6 +47,7 @@
     "warning": "^4.0.2"
   },
   "scripts": {
+    "build": "./build.sh",
     "copy": "rimraf ./core; cp -R ../../_fork/material-ui/packages/material-ui/src ./core; cp -R ../../_fork/material-ui/packages/material-ui-icons/src/index.js ./core/icons.js",
     "extract": "babel-node ./src/extract.js"
   },

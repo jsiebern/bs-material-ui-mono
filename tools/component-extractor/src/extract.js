@@ -16,7 +16,7 @@ const MuiPath = path.resolve(__dirname, '../', 'core');
 const components = findComponents();
 const theme = createMuiTheme();
 const rootDirectory = MuiPath;
-const outputDirectory = path.join(__dirname, '../../', 'output', 'json');
+const outputDirectory = path.join(__dirname, '../../../', 'output', 'json');
 
 rimraf.sync(path.join(outputDirectory, '*.json'));
 
