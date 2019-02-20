@@ -4,7 +4,6 @@
  */
 {
   "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush.schema.json",
-
   /**
    * (Required) This specifies the version of the Rush engine to be used in this repo.
    * Rush's "version selector" feature ensures that the globally installed tool will
@@ -17,7 +16,6 @@
    * correct error-underlining and tab-completion for editors such as VS Code.
    */
   "rushVersion": "5.5.4",
-
   /**
    * The next field selects which package manager should be installed and determines its version.
    * Rush installs its own local copy of the package manager to ensure that your build process
@@ -26,16 +24,13 @@
    * Specify one of: "pnpmVersion", "npmVersion", or "yarnVersion".  See the Rush documentation
    * for details about these alternatives.
    */
-  "pnpmVersion": "2.15.1",
-
+  // "pnpmVersion": "2.15.1",
   // "npmVersion": "4.5.0",
-  // "yarnVersion": "1.9.4",
-
+  "yarnVersion": "1.13.0",
   /**
    * Options that are only used when the PNPM package manager is selected
    */
   "pnpmOptions": {
-
     /**
      * If true, then Rush will add the "--strict-peer-dependencies" option when invoking PNPM.
      * This causes "rush install" to fail if there are unsatisfied peer dependencies, which is
@@ -48,7 +43,6 @@
      */
     // "strictPeerDependencies": true
   },
-
   /**
    * Older releases of the NodeJS engine may be missing features required by your system.
    * Other releases may have bugs.  In particular, the "latest" version will not be a
@@ -58,7 +52,6 @@
    * for your repo.
    */
   "nodeSupportedVersionRange": ">=8.9.4 <9.0.0",
-
   /**
    * If you would like the version specifiers for your dependencies to be consistent, then
    * uncomment this line. This is effectively similar to running "rush check" before any
@@ -70,8 +63,7 @@
    * version. In those cases, you will need to add an entry to the "allowedAlternateVersions"
    * section of the common-versions.json.
    */
-   // "ensureConsistentVersions": true,
-
+  // "ensureConsistentVersions": true,
   /**
    * Large monorepos can become intimidating for newcomers if project folder paths don't follow
    * a consistent and recognizable pattern.  When the system allows nested folder trees,
@@ -97,7 +89,6 @@
    */
   // "projectFolderMinDepth": 2,
   // "projectFolderMaxDepth": 2,
-
   /**
    * This feature helps you to review and approve new packages before they are introduced
    * to your monorepo.  For example, you may be concerned about licensing, code quality,
@@ -133,7 +124,6 @@
   //    */
   //   // "ignoredNpmScopes": [ "@types" ]
   // },
-
   /**
    * If you use Git as your version control system, this section has some additional
    * optional features you can use.
@@ -154,7 +144,6 @@
     //   "[^@]+@users\\.noreply\\.github\\.com",
     //   "travis@example\\.org"
     // ],
-
     /**
      * When Rush reports that the address is malformed, the notice can include an example
      * of a recommended email.  Make sure it conforms to one of the allowedEmailRegExps
@@ -162,7 +151,6 @@
      */
     // "sampleEmail": "mrexample@users.noreply.github.com"
   },
-
   "repository": {
     /**
      * This setting is sometimes needed when using "rush change" with multiple Git remotes.
@@ -171,7 +159,6 @@
      */
     // "url": "https://github.com/Microsoft/rush-example"
   },
-
   /**
    * Event hooks are customized script actions that Rush executes when specific events occur
    */
@@ -182,23 +169,19 @@
     "preRushInstall": [
       // "common/scripts/pre-rush-install.js"
     ],
-
     /**
      * The list of shell commands to run after the Rush installation finishes
      */
     "postRushInstall": [],
-
     /**
      * The list of shell commands to run before the Rush build command starts
      */
     "preRushBuild": [],
-
     /**
      * The list of shell commands to run after the Rush build command finishes
      */
     "postRushBuild": []
   },
-
   /**
    * Installation variants allow you to maintain a parallel set of configuration files that can be
    * used to build the entire monorepo with an alternate set of dependencies.  For example, suppose
@@ -229,7 +212,6 @@
     //   "description": "Build this repo using the previous release of the SDK"
     // }
   ],
-
   /**
    * Rush can collect anonymous telemetry about everyday developer activity such as
    * success/failure of installs, builds, and other operations.  You can use this to identify
@@ -239,12 +221,10 @@
    * in the "eventHooks" section.
    */
   // "telemetryEnabled": false,
-
   /**
    * Allows creation of hotfix changes. This feature is experimental so it is disabled by default.
    */
   // "hotfixChangeEnabled": false,
-
   /**
    * (Required) This is the inventory of projects to be managed by Rush.
    *
