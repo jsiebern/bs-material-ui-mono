@@ -1,7 +1,7 @@
 import * as Path from 'path';
 import * as Fs from 'fs';
 
-import Convert from '@jsiebern/json-schema-to-reason';
+import Convert from '@jsiebern/json-schema-parser';
 import outputDirectory from './output';
 
 const RenderTheme = () => {

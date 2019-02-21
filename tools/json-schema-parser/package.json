@@ -1,7 +1,7 @@
 {
   "name": "@jsiebern/json-schema-parser",
   "version": "0.0.10",
-  "main": "./dist/src_ts/index.js",
+  "main": "./dist/index.js",
   "types": "./index.d.ts",
   "author": "Jonathan Siebern <jsiebern88@gmail.com>",
   "license": "MIT",
@@ -16,7 +16,6 @@
     "reason": "^3.3.4",
     "typescript": "^3.2.1",
     "bs-decode": "^0.3.3",
-    "bs-platform": "^4.0.7",
     "parcel-bundler": "^1.10.3",
     "reason-react": "^0.5.3"
   }

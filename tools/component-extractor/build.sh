@@ -32,12 +32,19 @@ rm -rf ./core
 cp -R ./.mui-clone/packages/material-ui/src ./core
 cp -R ./.mui-clone/packages/material-ui-icons/src/index.js ./core/icons.js
 
+# Ensure output folder
+if [ ! -d "./../../output" ]; then
+  mkdir ./../../output
+fi
+
 # Extract components
 rm -rf ./../../output/json
 babel-node ./src/extract.js
 
 # Extract json schemas
 cd ./.mui-clone;
-npx typescript-json-schema ./tsconfig.json Theme --topRef --ignoreErrors --excludePrivate --required -o "${pwd}/../../output/json/theme.json"
-npx typescript-json-schema ./tsconfig.json ThemeOptions --topRef --ignoreErrors --excludePrivate --required -o "${pwd}/../../output/json/theme-options.json"
+pnpx typescript-json-schema ./tsconfig.json Theme --topRef --ignoreErrors --excludePrivate --required -o "${pwd}/../../output/json/theme.json"
+echo "Extracted theme.json"
+pnpx typescript-json-schema ./tsconfig.json ThemeOptions --topRef --ignoreErrors --excludePrivate --required -o "${pwd}/../../output/json/theme-options.json"
+echo "Extracted theme-options.json"
 cd $pwd

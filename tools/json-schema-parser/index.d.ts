@@ -1,4 +1,4 @@
-declare module '@jsiebern/json-schema-to-reason' {
+declare module '@jsiebern/json-schema-parser' {
     interface expDef {
         modules: any,
         string: string,

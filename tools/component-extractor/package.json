@@ -3,6 +3,35 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "build": "./build.sh",
+    "copy": "rimraf ./core; cp -R ../../_fork/material-ui/packages/material-ui/src ./core; cp -R ../../_fork/material-ui/packages/material-ui-icons/src/index.js ./core/icons.js",
+    "extract": "babel-node ./src/extract.js"
+  },
+  "dependencies": {
+    "@babel/plugin-transform-exponentiation-operator": "^7.1.0",
+    "@babel/runtime": "^7.1.2",
+    "@material-ui/core": "~3.9.2",
+    "@material-ui/utils": "~3.0.0-alpha.3",
+    "babel-plugin-syntax-exponentiation-operator": "^6.13.0",
+    "brcast": "~3.0.1",
+    "classnames": "^2.2.6",
+    "dom-helpers": "~3.4.0",
+    "hoist-non-react-statics": "~3.3.0",
+    "is-plain-object": "~2.0.4",
+    "jss": "~9.8.7",
+    "jss-camel-case": "~6.1.0",
+    "jss-default-unit": "~8.0.2",
+    "jss-global": "~3.0.0",
+    "jss-nested": "~6.0.1",
+    "jss-props-sort": "~6.0.0",
+    "jss-vendor-prefixer": "~8.0.1",
+    "popper.js": "~1.14.7",
+    "prop-types": "~15.7.2",
+    "react": "^16.5.2",
+    "react-docgen": "^3.0.0-rc.2",
+    "react-dom": "^16.5.2"
+  },
   "devDependencies": {
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
@@ -45,20 +74,5 @@
     "rimraf": "^2.6.2",
     "scroll": "^2.0.3",
     "warning": "^4.0.2"
-  },
-  "scripts": {
-    "build": "./build.sh",
-    "copy": "rimraf ./core; cp -R ../../_fork/material-ui/packages/material-ui/src ./core; cp -R ../../_fork/material-ui/packages/material-ui-icons/src/index.js ./core/icons.js",
-    "extract": "babel-node ./src/extract.js"
-  },
-  "dependencies": {
-    "@babel/plugin-transform-exponentiation-operator": "^7.1.0",
-    "@babel/runtime": "^7.1.2",
-    "@material-ui/utils": "^3.0.0-alpha.3",
-    "babel-plugin-syntax-exponentiation-operator": "^6.13.0",
-    "classnames": "^2.2.6",
-    "react": "^16.5.2",
-    "react-docgen": "^3.0.0-rc.2",
-    "react-dom": "^16.5.2"
   }
 }
