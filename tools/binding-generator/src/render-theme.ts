@@ -2,9 +2,10 @@ import * as Path from 'path';
 import * as Fs from 'fs';
 
 import Convert from '@jsiebern/json-schema-to-reason';
+import outputDirectory from './output';
 
 const RenderTheme = () => {
-    const path = Path.resolve(__dirname, '../', 'output/json');
+    const path = Path.resolve(outputDirectory, 'json');
     const themePath = Path.join(path, 'theme.json');
     const themeOptionsPath = Path.join(path, 'theme-options.json');
 

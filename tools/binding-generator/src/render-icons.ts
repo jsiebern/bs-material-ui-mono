@@ -1,7 +1,8 @@
 import * as Fs from 'fs';
 import * as Path from 'path';
+import outputDirectory from './output';
 
-const GetIcons = (): string[] => JSON.parse(Fs.readFileSync(Path.join(__dirname, '../', 'output', 'json', 'icons.json'), 'utf8'));
+const GetIcons = (): string[] => JSON.parse(Fs.readFileSync(Path.join(outputDirectory, 'json', 'icons.json'), 'utf8'));
 
 const RenderIcons = () => {
     const icons = GetIcons();
