@@ -253,6 +253,18 @@
     {
       "packageName": "@jsiebern/bs-material-ui",
       "projectFolder": "public/bs-material-ui"
+    },
+    {
+      "packageName": "@jsiebern/bs-material-ui-icons",
+      "projectFolder": "public/bs-material-ui-icons"
+    },
+    {
+      "packageName": "@jsiebern/bs-material-ui-icons-outlined",
+      "projectFolder": "public/bs-material-ui-icons-outlined"
+    },
+    {
+      "packageName": "@jsiebern/bs-material-ui-icons-rounded",
+      "projectFolder": "public/bs-material-ui-icons-rounded"
     }
     // {
     //   /**
