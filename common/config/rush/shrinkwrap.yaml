@@ -25,7 +25,9 @@ dependencies:
   '@babel/preset-react': 7.0.0
   '@babel/register': 7.0.0
   '@babel/runtime': 7.3.1
+  '@material-ui/icons': 3.0.2
   '@material-ui/utils': 3.0.0-alpha.3
+  '@rush-temp/bs-material-ui': 'file:projects/bs-material-ui.tgz'
   '@rush-temp/bs-material-ui-ppx': 'file:projects/bs-material-ui-ppx.tgz'
   '@rush-temp/json-schema-parser': 'file:projects/json-schema-parser.tgz'
   '@rush-temp/mui-binding-generator': 'file:projects/mui-binding-generator.tgz'
@@ -75,7 +77,6 @@ dependencies:
   react-popper: 1.3.3
   react-transition-group: 2.5.3
   reason: 3.3.4
-  reason-react: 0.5.3
   recompose: 0.30.0
   rimraf: 2.6.3
   scroll: 2.0.3
@@ -3382,11 +3383,11 @@ packages:
     dev: false
     resolution:
       integrity: sha512-FmuxfCuolpLl0AnQ2NHSzoUKWEJDFl63qXjzdoWBVyFCXzMGm1spBzk7LeHNoVCiWCF7mRVms9e6jEV9+MoPbg==
-  /@material-ui/core/3.9.2/react-dom@16.8.2+react@16.8.2:
+  /@material-ui/core/3.9.2/react-dom@16.8.3+react@16.8.3:
     dependencies:
       '@babel/runtime': 7.3.1
-      '@material-ui/system': /@material-ui/system/3.0.0-alpha.2/react-dom@16.8.2+react@16.8.2
-      '@material-ui/utils': /@material-ui/utils/3.0.0-alpha.3/react-dom@16.8.2+react@16.8.2
+      '@material-ui/system': /@material-ui/system/3.0.0-alpha.2/react-dom@16.8.3+react@16.8.3
+      '@material-ui/utils': /@material-ui/utils/3.0.0-alpha.3/react-dom@16.8.3+react@16.8.3
       '@types/jss': 9.5.7
       '@types/react-transition-group': 2.0.16
       brcast: 3.0.1
@@ -3407,11 +3408,11 @@ packages:
       normalize-scroll-left: 0.1.2
       popper.js: 1.14.7
       prop-types: 15.7.2
-      react: 16.8.2
-      react-dom: /react-dom/16.8.2/react@16.8.2
-      react-event-listener: /react-event-listener/0.6.6/react@16.8.2
-      react-transition-group: /react-transition-group/2.5.3/react-dom@16.8.2+react@16.8.2
-      recompose: /recompose/0.30.0/react@16.8.2
+      react: 16.8.3
+      react-dom: /react-dom/16.8.3/react@16.8.3
+      react-event-listener: /react-event-listener/0.6.6/react@16.8.3
+      react-transition-group: /react-transition-group/2.5.3/react-dom@16.8.3+react@16.8.3
+      recompose: /recompose/0.30.0/react@16.8.3
       warning: 4.0.3
     dev: false
     engines:
@@ -3422,13 +3423,43 @@ packages:
       react-dom: ^16.3.0
     resolution:
       integrity: sha512-aukR3mSH3g115St2OnqoeMRtmxzxxx+Mch7pFKRV3Tz3URExBlZwOolimjxKZpG4LGec8HlhREawafLsDzjVWQ==
-  /@material-ui/system/3.0.0-alpha.2/react-dom@16.8.2+react@16.8.2:
+  /@material-ui/icons/3.0.2:
+    dependencies:
+      '@babel/runtime': 7.3.1
+      recompose: 0.30.0
+    dev: false
+    engines:
+      node: '>=6.0.0'
+    peerDependencies:
+      '@material-ui/core': ^3.0.0
+      react: ^16.3.0
+      react-dom: ^16.3.0
+    resolution:
+      integrity: sha512-QY/3gJnObZQ3O/e6WjH+0ah2M3MOgLOzCy8HTUoUx9B6dDrS18vP7Ycw3qrDEKlB6q1KNxy6CZHm5FCauWGy2g==
+  /@material-ui/icons/3.0.2/068909a4a2757cd66a22bbd72c8e24db:
+    dependencies:
+      '@babel/runtime': 7.3.1
+      '@material-ui/core': /@material-ui/core/3.9.2/react-dom@16.8.3+react@16.8.3
+      react: 16.8.3
+      react-dom: /react-dom/16.8.3/react@16.8.3
+      recompose: /recompose/0.30.0/react@16.8.3
+    dev: false
+    engines:
+      node: '>=6.0.0'
+    id: registry.npmjs.org/@material-ui/icons/3.0.2
+    peerDependencies:
+      '@material-ui/core': ^3.0.0
+      react: ^16.3.0
+      react-dom: ^16.3.0
+    resolution:
+      integrity: sha512-QY/3gJnObZQ3O/e6WjH+0ah2M3MOgLOzCy8HTUoUx9B6dDrS18vP7Ycw3qrDEKlB6q1KNxy6CZHm5FCauWGy2g==
+  /@material-ui/system/3.0.0-alpha.2/react-dom@16.8.3+react@16.8.3:
     dependencies:
       '@babel/runtime': 7.3.1
       deepmerge: 3.2.0
       prop-types: 15.7.2
-      react: 16.8.2
-      react-dom: /react-dom/16.8.2/react@16.8.2
+      react: 16.8.3
+      react-dom: /react-dom/16.8.3/react@16.8.3
       warning: 4.0.3
     dev: false
     engines:
@@ -3443,7 +3474,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.3.1
       prop-types: 15.7.2
-      react-is: 16.8.2
+      react-is: 16.8.3
     dev: false
     engines:
       node: '>=6.0.0'
@@ -3452,13 +3483,13 @@ packages:
       react-dom: ^16.3.0
     resolution:
       integrity: sha512-rwMdMZptX0DivkqBuC+Jdq7BYTXwqKai5G5ejPpuEDKpWzi1Oxp+LygGw329FrKpuKeiqpcymlqJTjmy+quWng==
-  /@material-ui/utils/3.0.0-alpha.3/react-dom@16.8.2+react@16.8.2:
+  /@material-ui/utils/3.0.0-alpha.3/react-dom@16.8.3+react@16.8.3:
     dependencies:
       '@babel/runtime': 7.3.1
       prop-types: 15.7.2
-      react: 16.8.2
-      react-dom: /react-dom/16.8.2/react@16.8.2
-      react-is: 16.8.2
+      react: 16.8.3
+      react-dom: /react-dom/16.8.3/react@16.8.3
+      react-is: 16.8.3
     dev: false
     engines:
       node: '>=6.0.0'
@@ -5000,12 +5031,12 @@ packages:
       react: ^0.14.0 || ^15.0.0 || ^16.0.0
     resolution:
       integrity: sha512-KkpaLARMhsTsgp0d2NA/R94F/eDLbhXERdIq3LvX2biCAXcDvHYoOqHfWCHf1+OLj+HKBotLG3KqaOOf+C1C+A==
-  /create-react-context/0.2.2/prop-types@15.7.2+react@16.8.2:
+  /create-react-context/0.2.2/prop-types@15.7.2+react@16.8.3:
     dependencies:
       fbjs: 0.8.17
       gud: 1.0.0
       prop-types: 15.7.2
-      react: 16.8.2
+      react: 16.8.3
     dev: false
     id: registry.npmjs.org/create-react-context/0.2.2
     peerDependencies:
@@ -5274,7 +5305,7 @@ packages:
       integrity: sha1-GzN5LhHpFKL9bW7WRHRkRE5fpkA=
   /d/1.0.0:
     dependencies:
-      es5-ext: 0.10.47
+      es5-ext: 0.10.48
     dev: false
     resolution:
       integrity: sha1-dUu1v+VUUdpppYuU1F9MWwRi1Y8=
@@ -5664,18 +5695,18 @@ packages:
       node: '>= 0.4'
     resolution:
       integrity: sha512-qZryBOJjV//LaxLTV6UC//WewneB3LcXOL9NP++ozKVXsIIIpm/2c13UDiD9Jp2eThsecw9m3jPqDwTyobcdbg==
-  /es5-ext/0.10.47:
+  /es5-ext/0.10.48:
     dependencies:
       es6-iterator: 2.0.3
       es6-symbol: 3.1.1
       next-tick: 1.0.0
     dev: false
     resolution:
-      integrity: sha512-/1TItLfj+TTfWoeRcDn/0FbGV6SNo4R+On2GGVucPU/j3BWnXE2Co8h8CTo4Tu34gFJtnmwS9xiScKs4EjZhdw==
+      integrity: sha512-CdRvPlX/24Mj5L4NVxTs4804sxiS2CjVprgCmrgoDkdmjdY4D+ySHa7K3jJf8R40dFg0tIm3z/dk326LrnuSGw==
   /es6-iterator/2.0.3:
     dependencies:
       d: 1.0.0
-      es5-ext: 0.10.47
+      es5-ext: 0.10.48
       es6-symbol: 3.1.1
     dev: false
     resolution:
@@ -5683,7 +5714,7 @@ packages:
   /es6-map/0.1.5:
     dependencies:
       d: 1.0.0
-      es5-ext: 0.10.47
+      es5-ext: 0.10.48
       es6-iterator: 2.0.3
       es6-set: 0.1.5
       es6-symbol: 3.1.1
@@ -5694,7 +5725,7 @@ packages:
   /es6-set/0.1.5:
     dependencies:
       d: 1.0.0
-      es5-ext: 0.10.47
+      es5-ext: 0.10.48
       es6-iterator: 2.0.3
       es6-symbol: 3.1.1
       event-emitter: 0.3.5
@@ -5704,14 +5735,14 @@ packages:
   /es6-symbol/3.1.1:
     dependencies:
       d: 1.0.0
-      es5-ext: 0.10.47
+      es5-ext: 0.10.48
     dev: false
     resolution:
       integrity: sha1-vwDvT9q2uhtG7Le2KbTH7VcVzHc=
   /es6-weak-map/2.0.2:
     dependencies:
       d: 1.0.0
-      es5-ext: 0.10.47
+      es5-ext: 0.10.48
       es6-iterator: 2.0.3
       es6-symbol: 3.1.1
     dev: false
@@ -5825,7 +5856,7 @@ packages:
   /event-emitter/0.3.5:
     dependencies:
       d: 1.0.0
-      es5-ext: 0.10.47
+      es5-ext: 0.10.48
     dev: false
     resolution:
       integrity: sha1-34xp7vFkeSPHFXuc6DhAYQsCzDk=
@@ -6423,7 +6454,7 @@ packages:
       integrity: sha512-rqcy4pJo55FTTLWt+bU8ukscqHeE/e9KWvsOW2b/a3afxQZhwkQdT1rPPCJ0rYXdj4vNcasY8zHTH+jF/qStxw==
   /hoist-non-react-statics/3.3.0:
     dependencies:
-      react-is: 16.8.2
+      react-is: 16.8.3
     dev: false
     resolution:
       integrity: sha512-0XsbTXxgiaCDYDIWFcwkmerZPSwywfUqYmwT4jzewKTQSWoE6FCMoUVOeBJWK3E/CrWbxRG3m5GzY4lnIwGRBA==
@@ -6433,14 +6464,14 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-V6j+JM8zzdUkhgoVgh3cJchmcfs=
-  /homedir-polyfill/1.0.2:
+  /homedir-polyfill/1.0.3:
     dependencies:
       parse-passwd: 1.0.0
     dev: false
     engines:
       node: '>=0.10.0'
     resolution:
-      integrity: sha512-A0cau1b1F7kmsKG3vHLi7DQ2d13k/BefUGRKRa8+sv7f1Vs+N28f0uv9nnWo3CNH50VsVdLcSKdxtztwn6K3Vg==
+      integrity: sha512-eSmmWE5bZTK2Nou4g0AI3zZ9rswp7GRKoKXS1BLUkvPviOqs4YTN1djQIqrXy9k5gEtdLPy86JjRwsNM9tnDcA==
   /hosted-git-info/2.7.1:
     dev: false
     resolution:
@@ -7745,7 +7776,7 @@ packages:
     dev: false
     resolution:
       integrity: sha1-yobR/ogoFpsBICCOPchCS524NCw=
-  /next/6.1.2/react-dom@16.8.2+react@16.8.2:
+  /next/6.1.2/react-dom@16.8.3+react@16.8.3:
     dependencies:
       '@babel/core': 7.0.0-beta.42
       '@babel/plugin-proposal-class-properties': /@babel/plugin-proposal-class-properties/7.0.0-beta.42/@babel!core@7.0.0-beta.42
@@ -7781,15 +7812,15 @@ packages:
       path-to-regexp: 2.1.0
       prop-types: 15.6.0
       prop-types-exact: 1.1.1
-      react: 16.8.2
-      react-dom: /react-dom/16.8.2/react@16.8.2
+      react: 16.8.3
+      react-dom: /react-dom/16.8.3/react@16.8.3
       react-lifecycles-compat: 3.0.4
       recursive-copy: 2.0.6
       resolve: 1.5.0
       send: 0.16.1
       source-map: 0.5.7
       strip-ansi: 3.0.1
-      styled-jsx: /styled-jsx/2.2.6/react@16.8.2
+      styled-jsx: /styled-jsx/2.2.6/react@16.8.3
       touch: 3.1.0
       uglifyjs-webpack-plugin: /uglifyjs-webpack-plugin/1.1.6/webpack@3.10.0
       unfetch: 3.0.0
@@ -7810,7 +7841,7 @@ packages:
       react-dom: ^16.0.0
     resolution:
       integrity: sha512-/l0YNpHlph0l2VthNSzeADKZQJrF2Bq7a3OB0Cl91yeLYn+1y3oV9hQX/H6pj5lORai9fHGjooTwpqCOFfcnxg==
-  /next/7.0.3/react-dom@16.8.2+react@16.8.2:
+  /next/7.0.3/react-dom@16.8.3+react@16.8.3:
     dependencies:
       '@babel/core': 7.0.0
       '@babel/plugin-proposal-class-properties': /@babel/plugin-proposal-class-properties/7.0.0/@babel!core@7.0.0
@@ -7851,8 +7882,8 @@ packages:
       path-to-regexp: 2.1.0
       prop-types: 15.6.2
       prop-types-exact: 1.2.0
-      react: 16.8.2
-      react-dom: /react-dom/16.8.2/react@16.8.2
+      react: 16.8.3
+      react-dom: /react-dom/16.8.3/react@16.8.3
       react-error-overlay: 4.0.0
       recursive-copy: 2.0.6
       resolve: 1.5.0
@@ -7861,7 +7892,7 @@ packages:
       serialize-javascript: 1.4.0
       source-map: 0.5.7
       strip-ansi: 3.0.1
-      styled-jsx: /styled-jsx/3.1.0/react@16.8.2
+      styled-jsx: /styled-jsx/3.1.0/react@16.8.3
       terser: 3.16.1
       unfetch: 3.0.0
       url: 0.11.0
@@ -9190,7 +9221,7 @@ packages:
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
-      react-is: 16.8.2
+      react-is: 16.8.3
     dev: false
     resolution:
       integrity: sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -9350,19 +9381,19 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-2UseoLWabFNXuk1Foz4VDPSIAkxz+1Hmmq4qijzUmYHDq0ZSloKDLXtGLpQRcAi/M76hRpPtH1rV4BI5jNAOnQ==
-  /react-dom/16.8.2/react@16.8.2:
+  /react-dom/16.8.3/react@16.8.3:
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
       prop-types: 15.7.2
-      react: 16.8.2
-      scheduler: 0.13.2
+      react: 16.8.3
+      scheduler: 0.13.3
     dev: false
-    id: registry.npmjs.org/react-dom/16.8.2
+    id: registry.npmjs.org/react-dom/16.8.3
     peerDependencies:
       react: ^16.0.0
     resolution:
-      integrity: sha512-cPGfgFfwi+VCZjk73buu14pYkYBR1b/SRMSYqkLDdhSEHnSwcuYTPu6/Bh6ZphJFIk80XLvbSe2azfcRzNF+Xg==
+      integrity: sha512-ttMem9yJL4/lpItZAQ2NTFAbV7frotHk5DZEHXUOws2rMmrsvh1Na7ThGT0dTzUIl6pqTOi5tYREfL8AEna3lA==
   /react-error-overlay/4.0.0:
     dev: false
     resolution:
@@ -9377,11 +9408,11 @@ packages:
       react: ^16.3.0
     resolution:
       integrity: sha512-+hCNqfy7o9wvO6UgjqFmBzARJS7qrNoda0VqzvOuioEpoEXKutiKuv92dSz6kP7rYLmyHPyYNLesi5t/aH1gfw==
-  /react-event-listener/0.6.6/react@16.8.2:
+  /react-event-listener/0.6.6/react@16.8.3:
     dependencies:
       '@babel/runtime': 7.3.1
       prop-types: 15.7.2
-      react: 16.8.2
+      react: 16.8.3
       warning: 4.0.3
     dev: false
     id: registry.npmjs.org/react-event-listener/0.6.6
@@ -9389,10 +9420,10 @@ packages:
       react: ^16.3.0
     resolution:
       integrity: sha512-+hCNqfy7o9wvO6UgjqFmBzARJS7qrNoda0VqzvOuioEpoEXKutiKuv92dSz6kP7rYLmyHPyYNLesi5t/aH1gfw==
-  /react-is/16.8.2:
+  /react-is/16.8.3:
     dev: false
     resolution:
-      integrity: sha512-D+NxhSR2HUCjYky1q1DwpNUD44cDpUXzSmmFyC3ug1bClcU/iDNy0YNn1iwme28fn+NFhpA13IndOd42CrFb+Q==
+      integrity: sha512-Y4rC1ZJmsxxkkPuMLwvKvlL1Zfpbcu+Bf4ZigkHup3v9EfdYhAlWAaVyA19olXq2o2mGn0w+dFKvk3pVVlYcIA==
   /react-jss/8.6.1:
     dependencies:
       hoist-non-react-statics: 2.5.5
@@ -9407,14 +9438,14 @@ packages:
       react: '>=0.13'
     resolution:
       integrity: sha512-SH6XrJDJkAphp602J14JTy3puB2Zxz1FkM3bKVE8wON+va99jnUTKWnzGECb3NfIn9JPR5vHykge7K3/A747xQ==
-  /react-jss/8.6.1/react@16.8.2:
+  /react-jss/8.6.1/react@16.8.3:
     dependencies:
       hoist-non-react-statics: 2.5.5
       jss: 9.8.7
       jss-preset-default: /jss-preset-default/4.5.0/jss@9.8.7
       prop-types: 15.7.2
-      react: 16.8.2
-      theming: /theming/1.3.0/react@16.8.2
+      react: 16.8.3
+      theming: /theming/1.3.0/react@16.8.3
     dev: false
     engines:
       node: '>=4'
@@ -9440,13 +9471,13 @@ packages:
       react: 0.14.x || ^15.0.0 || ^16.0.0
     resolution:
       integrity: sha512-ynMZBPkXONPc5K4P5yFWgZx5JGAUIP3pGGLNs58cfAPgK67olx7fmLp+AdpZ0+GoQ+ieFDa/z4cdV6u7sioH6w==
-  /react-popper/1.3.3/react@16.8.2:
+  /react-popper/1.3.3/react@16.8.3:
     dependencies:
       '@babel/runtime': 7.3.1
-      create-react-context: /create-react-context/0.2.2/prop-types@15.7.2+react@16.8.2
+      create-react-context: /create-react-context/0.2.2/prop-types@15.7.2+react@16.8.3
       popper.js: 1.14.7
       prop-types: 15.7.2
-      react: 16.8.2
+      react: 16.8.3
       typed-styles: 0.0.7
       warning: 4.0.3
     dev: false
@@ -9467,13 +9498,13 @@ packages:
       react-dom: '>=15.0.0'
     resolution:
       integrity: sha512-2DGFck6h99kLNr8pOFk+z4Soq3iISydwOFeeEVPjTN6+Y01CmvbWmnN02VuTWyFdnRtIDPe+wy2q6Ui8snBPZg==
-  /react-transition-group/2.5.3/react-dom@16.8.2+react@16.8.2:
+  /react-transition-group/2.5.3/react-dom@16.8.3+react@16.8.3:
     dependencies:
       dom-helpers: 3.4.0
       loose-envify: 1.4.0
       prop-types: 15.7.2
-      react: 16.8.2
-      react-dom: /react-dom/16.8.2/react@16.8.2
+      react: 16.8.3
+      react-dom: /react-dom/16.8.3/react@16.8.3
       react-lifecycles-compat: 3.0.4
     dev: false
     id: registry.npmjs.org/react-transition-group/2.5.3
@@ -9482,17 +9513,17 @@ packages:
       react-dom: '>=15.0.0'
     resolution:
       integrity: sha512-2DGFck6h99kLNr8pOFk+z4Soq3iISydwOFeeEVPjTN6+Y01CmvbWmnN02VuTWyFdnRtIDPe+wy2q6Ui8snBPZg==
-  /react/16.8.2:
+  /react/16.8.3:
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
       prop-types: 15.7.2
-      scheduler: 0.13.2
+      scheduler: 0.13.3
     dev: false
     engines:
       node: '>=0.10.0'
     resolution:
-      integrity: sha512-aB2ctx9uQ9vo09HVknqv3DGRpI7OIGJhCx3Bt0QqoRluEjHSaObJl+nG12GDdYH6sTgE7YiPJ6ZUyMx9kICdXw==
+      integrity: sha512-3UoSIsEq8yTJuSu0luO1QQWYbgGEILm+eJl2QN/VLDi7hL+EN18M3q3oVZwmVzzBJ3DkM7RMdRwBmZZ+b4IzSA==
   /read-pkg-up/2.0.0:
     dependencies:
       find-up: 2.1.0
@@ -9546,8 +9577,8 @@ packages:
       integrity: sha512-1JU/8q+VgFZyxwrJ+SVIOsh+KywWGpds3NTqikiKpDMZWScmAYyKIgqkO+ARvNWJfXeXR1zxz7aHF4u4CyH6vQ==
   /reason-react/0.5.3:
     dependencies:
-      react: 16.8.2
-      react-dom: /react-dom/16.8.2/react@16.8.2
+      react: 16.8.3
+      react-dom: /react-dom/16.8.3/react@16.8.3
     dev: false
     resolution:
       integrity: sha512-dUkoqXrP/gOjkmkW+k/otEUP+yeXH5+QfdxNT5EW60MXM3zbCdFhbNzKBbjYOZ6x96UbxK869CObjX04BdJEDg==
@@ -9579,13 +9610,13 @@ packages:
       react: ^0.14.0 || ^15.0.0 || ^16.0.0
     resolution:
       integrity: sha512-ZTrzzUDa9AqUIhRk4KmVFihH0rapdCSMFXjhHbNrjAWxBuUD/guYlyysMnuHjlZC/KRiOKRtB4jf96yYSkKE8w==
-  /recompose/0.30.0/react@16.8.2:
+  /recompose/0.30.0/react@16.8.3:
     dependencies:
       '@babel/runtime': 7.3.1
       change-emitter: 0.1.6
       fbjs: 0.8.17
       hoist-non-react-statics: 2.5.5
-      react: 16.8.2
+      react: 16.8.3
       react-lifecycles-compat: 3.0.4
       symbol-observable: 1.2.0
     dev: false
@@ -9855,13 +9886,13 @@ packages:
     dev: false
     resolution:
       integrity: sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
-  /scheduler/0.13.2:
+  /scheduler/0.13.3:
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
     dev: false
     resolution:
-      integrity: sha512-qK5P8tHS7vdEMCW5IPyt8v9MJOHqTrOUgPXib7tqm9vh834ibBX5BNhwkplX/0iOzHW5sXyluehYfS9yrkz9+w==
+      integrity: sha512-UxN5QRYWtpR1egNWzJcVLk8jlegxAugswQc984lD3kU7NuobsO37/sRfbpTdBjtnD5TBNFA2Q2oLV5+UmPSmEQ==
   /schema-utils/0.4.7:
     dependencies:
       ajv: 6.9.1
@@ -10374,12 +10405,12 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-PFMZQukIwml8DsNEhYwobHygpgo=
-  /styled-jsx/2.2.6/react@16.8.2:
+  /styled-jsx/2.2.6/react@16.8.3:
     dependencies:
       babel-plugin-syntax-jsx: 6.18.0
       babel-types: 6.26.0
       convert-source-map: 1.5.1
-      react: 16.8.2
+      react: 16.8.3
       source-map: 0.6.1
       string-hash: 1.1.3
       stylis: 3.4.10
@@ -10390,13 +10421,13 @@ packages:
       react: 15.x.x || 16.x.x
     resolution:
       integrity: sha512-lx678TbNf56I7W4JezJqbLdSiTOpuKvixaZTCjHapFbuJQV3b3dByza6u8+cPRtG/PAmBHeA61croO77rp5auw==
-  /styled-jsx/3.1.0/react@16.8.2:
+  /styled-jsx/3.1.0/react@16.8.3:
     dependencies:
       babel-plugin-syntax-jsx: 6.18.0
       babel-types: 6.26.0
       convert-source-map: 1.5.1
       loader-utils: 1.1.0
-      react: 16.8.2
+      react: 16.8.3
       source-map: 0.7.3
       string-hash: 1.1.3
       stylis: 3.5.3
@@ -10571,13 +10602,13 @@ packages:
       react: '>=0.15'
     resolution:
       integrity: sha512-ya5Ef7XDGbTPBv5ENTwrwkPUexrlPeiAg/EI9kdlUAZhNlRbCdhMKRgjNX1IcmsmiPcqDQZE6BpSaH+cr31FKw==
-  /theming/1.3.0/react@16.8.2:
+  /theming/1.3.0/react@16.8.3:
     dependencies:
       brcast: 3.0.1
       is-function: 1.0.1
       is-plain-object: 2.0.4
       prop-types: 15.7.2
-      react: 16.8.2
+      react: 16.8.3
     dev: false
     id: registry.npmjs.org/theming/1.3.0
     peerDependencies:
@@ -10717,13 +10748,13 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-Gr4p6nFNaoufRIY4NMdpQRNmgxVIGMs4Fcu/ujdYk3nAZqk7supzBE9idmvfZIlH/Cuj//dvi+019qEue9lV0w==
-  /typescript/3.3.3:
+  /typescript/3.3.3333:
     dev: false
     engines:
       node: '>=4.2.0'
     hasBin: true
     resolution:
-      integrity: sha512-Y21Xqe54TBVp+VDSNbuDYdGw0BpoR/Q6wo/+35M8PAU0vipahnyduJWirxxdxjsAkS7hue53x2zp8gz7F05u0A==
+      integrity: sha512-JjSKsAfuHBE/fB2oZ8NxtRTk5iGcg6hkYXMnZ3Wc+b2RSqejEqTaem11mHASMnFilHrax3sLK0GDzcJrekZYLw==
   /ua-parser-js/0.7.19:
     dev: false
     resolution:
@@ -10971,7 +11002,7 @@ packages:
       integrity: sha512-1wFuMUIM16MDJRCrpbpuEPTUGmM5QMUg0cr3KFwra2XgOgFcPGDQHDh3CszSCD2Zewc/dh/pamNEW8CbfDebUw==
   /v8flags/3.1.2:
     dependencies:
-      homedir-polyfill: 1.0.2
+      homedir-polyfill: 1.0.3
     dev: false
     engines:
       node: '>= 0.10'
@@ -11382,6 +11413,22 @@ packages:
       integrity: sha512-G6Q6m/YMqDzyxO00Iz91RXxknr3jTC5+/Sl9y8vJZVc13uQfhtanyo0L/gUft1OWx5plyj1f18i6JaHuMA7r9w==
       tarball: 'file:projects/bs-material-ui-ppx.tgz'
     version: 0.0.0
+  'file:projects/bs-material-ui.tgz':
+    dependencies:
+      '@material-ui/core': /@material-ui/core/3.9.2/react-dom@16.8.3+react@16.8.3
+      '@material-ui/icons': /@material-ui/icons/3.0.2/068909a4a2757cd66a22bbd72c8e24db
+      bs-platform: 5.0.0-dev.4
+      bsb-js: 1.1.7
+      parcel-bundler: 1.11.0
+      react: 16.8.3
+      react-dom: /react-dom/16.8.3/react@16.8.3
+      reason-react: 0.5.3
+    dev: false
+    name: '@rush-temp/bs-material-ui'
+    resolution:
+      integrity: sha512-Ghuk9A11oIbP7QjXz1KT22GEzEAoU2nCEF6Ac8xkScU3ItCngAs7OuLbUFxMWSt2DGNoEHsx+53Hjxj1jcEiOA==
+      tarball: 'file:projects/bs-material-ui.tgz'
+    version: 0.0.0
   'file:projects/json-schema-parser.tgz':
     dependencies:
       '@types/json-schema': 7.0.3
@@ -11390,7 +11437,7 @@ packages:
       parcel-bundler: 1.11.0
       reason: 3.3.4
       reason-react: 0.5.3
-      typescript: 3.3.3
+      typescript: 3.3.3333
     dev: false
     name: '@rush-temp/json-schema-parser'
     resolution:
@@ -11399,7 +11446,7 @@ packages:
     version: 0.0.0
   'file:projects/mui-binding-generator.tgz':
     dependencies:
-      '@material-ui/core': /@material-ui/core/3.9.2/react-dom@16.8.2+react@16.8.2
+      '@material-ui/core': /@material-ui/core/3.9.2/react-dom@16.8.3+react@16.8.3
       '@types/doctrine': 0.0.3
       '@types/json-schema': 7.0.3
       '@types/lodash': 4.14.121
@@ -11410,11 +11457,11 @@ packages:
       doctrine: 2.1.0
       fs: 0.0.1-security
       lodash: 4.17.11
-      next: /next/6.1.2/react-dom@16.8.2+react@16.8.2
+      next: /next/6.1.2/react-dom@16.8.3+react@16.8.3
       object-hash: 1.3.1
       path: 0.12.7
-      react: 16.8.2
-      react-dom: /react-dom/16.8.2/react@16.8.2
+      react: 16.8.3
+      react-dom: /react-dom/16.8.3/react@16.8.3
       reason: 3.3.4
       reason-react: 0.5.3
       ts-node: 7.0.1
@@ -11453,8 +11500,8 @@ packages:
       '@babel/preset-react': /@babel/preset-react/7.0.0/@babel!core@7.3.3
       '@babel/register': /@babel/register/7.0.0/@babel!core@7.3.3
       '@babel/runtime': 7.3.1
-      '@material-ui/core': /@material-ui/core/3.9.2/react-dom@16.8.2+react@16.8.2
-      '@material-ui/utils': /@material-ui/utils/3.0.0-alpha.3/react-dom@16.8.2+react@16.8.2
+      '@material-ui/core': /@material-ui/core/3.9.2/react-dom@16.8.3+react@16.8.3
+      '@material-ui/utils': /@material-ui/utils/3.0.0-alpha.3/react-dom@16.8.3+react@16.8.3
       babel-loader: /babel-loader/8.0.5/@babel!core@7.3.3
       babel-plugin-module-resolver: 3.2.0
       babel-plugin-preval: 3.0.1
@@ -11475,18 +11522,18 @@ packages:
       jss-props-sort: /jss-props-sort/6.0.0/jss@9.8.7
       jss-vendor-prefixer: /jss-vendor-prefixer/8.0.1/jss@9.8.7
       keycode: 2.2.0
-      next: /next/7.0.3/react-dom@16.8.2+react@16.8.2
+      next: /next/7.0.3/react-dom@16.8.3+react@16.8.3
       normalize-scroll-left: 0.1.2
       popper.js: 1.14.7
       prop-types: 15.7.2
-      react: 16.8.2
+      react: 16.8.3
       react-docgen: 3.0.0
-      react-dom: /react-dom/16.8.2/react@16.8.2
-      react-event-listener: /react-event-listener/0.6.6/react@16.8.2
-      react-jss: /react-jss/8.6.1/react@16.8.2
-      react-popper: /react-popper/1.3.3/react@16.8.2
-      react-transition-group: /react-transition-group/2.5.3/react-dom@16.8.2+react@16.8.2
-      recompose: /recompose/0.30.0/react@16.8.2
+      react-dom: /react-dom/16.8.3/react@16.8.3
+      react-event-listener: /react-event-listener/0.6.6/react@16.8.3
+      react-jss: /react-jss/8.6.1/react@16.8.3
+      react-popper: /react-popper/1.3.3/react@16.8.3
+      react-transition-group: /react-transition-group/2.5.3/react-dom@16.8.3+react@16.8.3
+      recompose: /recompose/0.30.0/react@16.8.3
       rimraf: 2.6.3
       scroll: 2.0.3
       warning: 4.0.3
@@ -11526,7 +11573,9 @@ specifiers:
   '@babel/preset-react': ^7.0.0
   '@babel/register': ^7.0.0
   '@babel/runtime': ^7.1.2
+  '@material-ui/icons': ^3.0.1
   '@material-ui/utils': ~3.0.0-alpha.3
+  '@rush-temp/bs-material-ui': 'file:./projects/bs-material-ui.tgz'
   '@rush-temp/bs-material-ui-ppx': 'file:./projects/bs-material-ui-ppx.tgz'
   '@rush-temp/json-schema-parser': 'file:./projects/json-schema-parser.tgz'
   '@rush-temp/mui-binding-generator': 'file:./projects/mui-binding-generator.tgz'
@@ -11576,7 +11625,6 @@ specifiers:
   react-popper: ^1.0.2
   react-transition-group: ^2.5.0
   reason: ^3.3.4
-  reason-react: ^0.5.3
   recompose: ^0.30.0
   rimraf: ^2.6.2
   scroll: ^2.0.3

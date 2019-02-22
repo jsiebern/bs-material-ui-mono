@@ -51,7 +51,7 @@
    * Specify a SemVer range to ensure developers use a NodeJS version that is appropriate
    * for your repo.
    */
-  "nodeSupportedVersionRange": ">=8.9.4 <9.0.0",
+  "nodeSupportedVersionRange": ">=8.9.1 <9.0.0",
   /**
    * If you would like the version specifiers for your dependencies to be consistent, then
    * uncomment this line. This is effectively similar to running "rush check" before any
@@ -249,6 +249,10 @@
     {
       "packageName": "@jsiebern/bs-material-ui-ppx",
       "projectFolder": "public/bs-material-ui-ppx"
+    },
+    {
+      "packageName": "@jsiebern/bs-material-ui",
+      "projectFolder": "public/bs-material-ui"
     }
     // {
     //   /**
