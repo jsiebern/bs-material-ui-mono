@@ -20,7 +20,7 @@ pnpm run build
 
 cd $pwd
 
-cd tools/withstyles-ppx
+cd public/bs-material-ui-ppx
 pnpm run build
 
 cd $pwd

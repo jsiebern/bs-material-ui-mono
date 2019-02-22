@@ -248,7 +248,7 @@
     },
     {
       "packageName": "@jsiebern/bs-material-ui-ppx",
-      "projectFolder": "tools/withstyles-ppx"
+      "projectFolder": "public/bs-material-ui-ppx"
     }
     // {
     //   /**
