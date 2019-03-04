@@ -33,9 +33,9 @@
     "react-dom": "^16.5.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.1.2",
-    "@babel/core": "^7.1.2",
-    "@babel/node": "^7.0.0",
+    "@babel/cli": "~7.2.0",
+    "@babel/core": "~7.2.2",
+    "@babel/node": "7.2.2",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/plugin-proposal-decorators": "^7.1.2",
     "@babel/plugin-proposal-do-expressions": "^7.0.0",
@@ -73,6 +73,7 @@
     "recompose": "^0.30.0",
     "rimraf": "^2.6.2",
     "scroll": "^2.0.3",
+    "typescript-json-schema": "^0.36.0",
     "warning": "^4.0.2"
   }
 }

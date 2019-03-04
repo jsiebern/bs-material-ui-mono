@@ -14,6 +14,7 @@ if [ ! -d "./.mui-clone" ]; then
 fi
 cd ./.mui-clone
 git reset --hard
+git checkout master
 git pull origin master
 releases=$(get_releases mui-org/material-ui)
 select TAGNAME in $releases;
@@ -25,6 +26,7 @@ do
   esac
 done
 git checkout $TAGNAME
+yarn install
 cd $pwd
 
 # Copy source files
@@ -43,8 +45,8 @@ babel-node ./src/extract.js
 
 # Extract json schemas
 cd ./.mui-clone;
-pnpx typescript-json-schema ./tsconfig.json Theme --topRef --ignoreErrors --excludePrivate --required -o "${pwd}/../../output/json/theme.json"
+typescript-json-schema ./tsconfig.json Theme --topRef --ignoreErrors --excludePrivate --required -o "${pwd}/../../output/json/theme.json"
 echo "Extracted theme.json"
-pnpx typescript-json-schema ./tsconfig.json ThemeOptions --topRef --ignoreErrors --excludePrivate --required -o "${pwd}/../../output/json/theme-options.json"
+typescript-json-schema ./tsconfig.json ThemeOptions --topRef --ignoreErrors --excludePrivate --required -o "${pwd}/../../output/json/theme-options.json"
 echo "Extracted theme-options.json"
 cd $pwd
