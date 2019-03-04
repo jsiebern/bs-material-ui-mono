@@ -7,7 +7,7 @@ import * as Console from './helpers/console';
 import GetComponents from './helpers/get-components';
 import Component from './classes/component';
 import RenderColors from './render-colors';
-// import RenderIcons from './render-icons';
+import RenderIcons from './render-icons';
 import RenderTheme from './render-theme';
 
 const parseInit = () => {
@@ -41,7 +41,14 @@ const parseInit = () => {
         Fs.writeFileSync(Path.join(outputDirectory, 'reason', `${key}.re`), RenderColors.colorFiles[key]);
     });
 
-    // Write Icon Type
+    // Write Icons
+    Object.keys(RenderIcons).forEach(iconCategory => {
+        Object.keys(RenderIcons[iconCategory]).forEach(iconName => {
+            const iconContent = RenderIcons[iconCategory][iconName];
+            Fs.writeFileSync(Path.join(outputDirectory, 'reason', `Icons_${iconCategory}`, `MaterialUi_Icon_${iconName}.re`), iconContent);
+        });
+    });
+
     // Fs.writeFileSync(Path.join(outputDirectory, 'reason', `MaterialUi_Icons.re`), RenderIcons);
 
     // Write component files
@@ -94,6 +101,19 @@ const parseInit = () => {
 if (Fs.existsSync(Path.join(outputDirectory, 'reason'))) {
     rimraf.sync(Path.join(outputDirectory, 'reason'));
 }
-Fs.mkdirSync(Path.join(outputDirectory, 'reason'));
+const requiredFolders = [
+    'reason',
+    'reason/Icons_Default',
+    'reason/Icons_Outlined',
+    'reason/Icons_Rounded',
+    'reason/Icons_TwoTone',
+    'reason/Icons_Sharp',
+];
+requiredFolders.forEach(folder => {
+    const path = Path.join(outputDirectory, folder);
+    if (!Fs.existsSync(path)) {
+        Fs.mkdirSync(path);
+    }
+});
 
 parseInit();

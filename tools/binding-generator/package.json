@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "Reason binding generator for material-ui v1",
   "scripts": {
-    "bsb": "bsb -make-world;",
+    "bsb:build": "bsb -make-world",
+    "bsb:clean": "bsb -clean-world",
     "build": "./build.sh"
   },
   "author": "Jonathan Siebern <jsiebern88@gmail.com>",
@@ -31,7 +32,7 @@
     "path": "^0.12.7",
     "react": "^16.3.0",
     "reason-react": "^0.5.3",
-    "ts-node": "~7.0.0",
+    "ts-node": "~8.0.2",
     "typescript": "^2.8.4"
   }
 }
