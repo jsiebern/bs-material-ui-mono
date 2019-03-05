@@ -56,7 +56,7 @@ external makeProps:
     ~className: string=?,
     ~color: string=?,
     ~invisible: bool=?,
-    ~max: 'number_e=?,
+    ~max: 'number_r=?,
     ~showZero: bool=?,
     ~variant: string=?,
     ~classes: Js.Dict.t(string)=?,

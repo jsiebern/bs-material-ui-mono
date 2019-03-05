@@ -37,9 +37,9 @@ external makeProps:
     ~defaultExpanded: bool=?,
     ~disabled: bool=?,
     ~expanded: bool=?,
-    ~onChange: 'any_rsqb=?,
+    ~onChange: 'any_rfd6=?,
     ~square: bool=?,
-    ~elevation: 'number_p=?,
+    ~elevation: 'number_6=?,
     ~classes: Js.Dict.t(string)=?,
     ~style: ReactDOMRe.Style.t=?,
     unit

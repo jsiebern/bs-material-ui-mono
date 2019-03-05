@@ -32,7 +32,7 @@ external makeProps:
     ~action: ReasonReact.reactElement=?,
     ~className: string=?,
     ~message: ReasonReact.reactElement=?,
-    ~elevation: 'number_e=?,
+    ~elevation: 'number_x=?,
     ~square: bool=?,
     ~classes: Js.Dict.t(string)=?,
     ~style: ReactDOMRe.Style.t=?,

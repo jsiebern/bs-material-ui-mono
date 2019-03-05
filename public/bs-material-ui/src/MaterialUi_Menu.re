@@ -225,10 +225,10 @@ module Classes = {
 [@bs.obj]
 external makeProps:
   (
-    ~anchorEl: 'any_rl0v=?,
+    ~anchorEl: 'any_r5vq=?,
     ~disableAutoFocusItem: bool=?,
     ~_MenuListProps: Js.t({..})=?,
-    ~onClose: 'any_rmj3=?,
+    ~onClose: 'any_rrzl=?,
     ~onEnter: ReactEvent.Synthetic.t => unit=?,
     ~onEntered: ReactEvent.Synthetic.t => unit=?,
     ~onEntering: ReactEvent.Synthetic.t => unit=?,
@@ -239,18 +239,18 @@ external makeProps:
     ~_PaperProps: Js.t({..})=?,
     ~_PopoverClasses: Js.t({..})=?,
     ~theme: Js.t({..})=?,
-    ~transitionDuration: 'union_r9kr=?,
-    ~action: 'any_reft=?,
-    ~anchorOrigin: 'any_rbrj=?,
-    ~anchorPosition: 'any_rlqf=?,
+    ~transitionDuration: 'union_r1tj=?,
+    ~action: 'any_rv0w=?,
+    ~anchorOrigin: 'any_rxsv=?,
+    ~anchorPosition: 'any_r08d=?,
     ~anchorReference: string=?,
-    ~container: 'union_rbkd=?,
-    ~elevation: 'number_i=?,
+    ~container: 'union_rfut=?,
+    ~elevation: 'number_9=?,
     ~getContentAnchorEl: 'genericCallback=?,
-    ~marginThreshold: 'number_6=?,
+    ~marginThreshold: 'number_c=?,
     ~_ModalClasses: Js.t({..})=?,
     ~role: string=?,
-    ~transformOrigin: 'any_rvx8=?,
+    ~transformOrigin: 'any_rxlr=?,
     ~_TransitionProps: Js.t({..})=?,
     ~classes: Js.Dict.t(string)=?,
     ~style: ReactDOMRe.Style.t=?,
@@ -262,7 +262,7 @@ external makeProps:
 external reactClass: ReasonReact.reactClass = "Menu";
 let make =
     (
-      ~anchorEl: option('any_rl0v)=?,
+      ~anchorEl: option('any_r5vq)=?,
       ~disableAutoFocusItem: option(bool)=?,
       ~_MenuListProps: option(Js.t({..}))=?,
       ~onClose: option((ReactEvent.Synthetic.t, string) => unit)=?,

@@ -67,7 +67,7 @@ external makeProps:
     ~className: string=?,
     ~color: string=?,
     ~position: string=?,
-    ~elevation: 'number_8=?,
+    ~elevation: 'number_n=?,
     ~square: bool=?,
     ~classes: Js.Dict.t(string)=?,
     ~style: ReactDOMRe.Style.t=?,

@@ -39,7 +39,7 @@ external makeProps:
     ~disableGutters: bool=?,
     ~role: string=?,
     ~selected: bool=?,
-    ~value: 'union_rnfy=?,
+    ~value: 'union_rm23=?,
     ~onFocus: ReactEvent.Focus.t => unit=?,
     ~onClick: ReactEvent.Mouse.t => unit=?,
     ~alignItems: string=?,

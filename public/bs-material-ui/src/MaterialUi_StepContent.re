@@ -78,7 +78,7 @@ external makeProps:
     ~last: bool=?,
     ~optional: bool=?,
     ~orientation: string=?,
-    ~transitionDuration: 'union_r5ti=?,
+    ~transitionDuration: 'union_r1wf=?,
     ~_TransitionProps: Js.t({..})=?,
     ~classes: Js.Dict.t(string)=?,
     ~style: ReactDOMRe.Style.t=?,

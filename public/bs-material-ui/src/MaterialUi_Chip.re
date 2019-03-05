@@ -119,7 +119,7 @@ external makeProps:
     ~onDelete: ReactEvent.Synthetic.t => unit=?,
     ~onKeyDown: ReactEvent.Keyboard.t => unit=?,
     ~onKeyUp: ReactEvent.Keyboard.t => unit=?,
-    ~tabIndex: 'union_rb9y=?,
+    ~tabIndex: 'union_r550=?,
     ~variant: string=?,
     ~classes: Js.Dict.t(string)=?,
     ~style: ReactDOMRe.Style.t=?,

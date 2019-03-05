@@ -1,3 +1,13 @@
+module Icons = {
+  open MscharleyBsMaterialUiIcons;
+
+  module SupervisedUserCircle_Filled = SupervisedUserCircle.Filled;
+  module SupervisedUserCircle_Outlined = SupervisedUserCircle.Outlined;
+  module SupervisedUserCircle_Rounded = SupervisedUserCircle.Rounded;
+  module SupervisedUserCircle_TwoTone = SupervisedUserCircle.TwoTone;
+  module SupervisedUserCircle_Sharp = SupervisedUserCircle.Sharp;
+};
+
 let rs = ReasonReact.string;
 let component = ReasonReact.statelessComponent(__MODULE__);
 
@@ -10,19 +20,19 @@ let make = _ => {
           "Icon Types:"
         </MaterialUi_Typography>
         <MaterialUi_Tooltip title={"Default"->rs}>
-          <MaterialUi_Icons.SupervisedUserCircle />
+          <Icons.SupervisedUserCircle_Filled />
         </MaterialUi_Tooltip>
         <MaterialUi_Tooltip title={"Outlined"->rs}>
-          <MaterialUi_Icons.SupervisedUserCircleOutlined />
+          <Icons.SupervisedUserCircle_Outlined />
         </MaterialUi_Tooltip>
         <MaterialUi_Tooltip title={"Rounded"->rs}>
-          <MaterialUi_Icons.SupervisedUserCircleRounded />
+          <Icons.SupervisedUserCircle_Rounded />
         </MaterialUi_Tooltip>
         <MaterialUi_Tooltip title={"TwoTone"->rs}>
-          <MaterialUi_Icons.SupervisedUserCircleTwoTone />
+          <Icons.SupervisedUserCircle_TwoTone />
         </MaterialUi_Tooltip>
         <MaterialUi_Tooltip title={"Sharp"->rs}>
-          <MaterialUi_Icons.SupervisedUserCircleSharp />
+          <Icons.SupervisedUserCircle_Sharp />
         </MaterialUi_Tooltip>
       </div>
       <hr />
@@ -31,19 +41,10 @@ let make = _ => {
           "Icon Colors:"
         </MaterialUi_Typography>
         <MaterialUi_Tooltip title={"Primary"->rs}>
-          <MaterialUi_Icons.SupervisedUserCircle color=`Primary />
+          <Icons.SupervisedUserCircle_Filled color=`Primary />
         </MaterialUi_Tooltip>
         <MaterialUi_Tooltip title={"Secondary"->rs}>
-          <MaterialUi_Icons.SupervisedUserCircle color=`Secondary />
-        </MaterialUi_Tooltip>
-        <MaterialUi_Tooltip title={"Action"->rs}>
-          <MaterialUi_Icons.SupervisedUserCircle color=`Action />
-        </MaterialUi_Tooltip>
-        <MaterialUi_Tooltip title={"Error"->rs}>
-          <MaterialUi_Icons.SupervisedUserCircle color=`Error />
-        </MaterialUi_Tooltip>
-        <MaterialUi_Tooltip title={"Disabled"->rs}>
-          <MaterialUi_Icons.SupervisedUserCircle color=`Disabled />
+          <Icons.SupervisedUserCircle_Filled color=`Secondary />
         </MaterialUi_Tooltip>
       </div>
       <hr />
@@ -52,13 +53,13 @@ let make = _ => {
           "Icon Sizes:"
         </MaterialUi_Typography>
         <MaterialUi_Tooltip title={"Large"->rs}>
-          <MaterialUi_Icons.SupervisedUserCircle fontSize=`Large />
+          <Icons.SupervisedUserCircle_Filled fontSize=`Large />
         </MaterialUi_Tooltip>
         <MaterialUi_Tooltip title={"Default"->rs}>
-          <MaterialUi_Icons.SupervisedUserCircle fontSize=`Default />
+          <Icons.SupervisedUserCircle_Filled fontSize=`Default />
         </MaterialUi_Tooltip>
         <MaterialUi_Tooltip title={"Small"->rs}>
-          <MaterialUi_Icons.SupervisedUserCircle fontSize=`Small />
+          <Icons.SupervisedUserCircle_Filled fontSize=`Small />
         </MaterialUi_Tooltip>
       </div>
     </>,

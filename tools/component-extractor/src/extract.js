@@ -23,21 +23,24 @@ rimraf.sync(path.join(outputDirectory, '*.json'));
 components.forEach(componentPath => {
     const src = readFileSync(componentPath, 'utf8');
 
-    if (src.match(/@ignore - internal component\./) || src.match(/@ignore - do not document\./)) {
+    if (
+        src.match(/@ignore - internal component\./) ||
+        src.match(/@ignore - do not document\./)
+    ) {
         return;
     }
 
     const component = require(componentPath);
     const styles = {
         classes: [],
-        name: null,
+        name: null
     };
 
     if (component.styles && component.default.options) {
         // Collect the customization points of the `classes` property.
-        styles.classes = Object.keys(getStylesCreator(component.styles).create(theme)).filter(
-            className => !className.match(/^(@media|@keyframes)/),
-        );
+        styles.classes = Object.keys(
+            getStylesCreator(component.styles).create(theme)
+        ).filter(className => !className.match(/^(@media|@keyframes)/));
         styles.name = component.default.options.name;
     }
 
@@ -63,8 +66,8 @@ components.forEach(componentPath => {
 
     if (typeof reactAPI.props.classes !== 'undefined') {
         reactAPI.props.classes.flowType = {
-            "name": "classes",
-            "elements": reactAPI.styles.classes
+            name: 'classes',
+            elements: reactAPI.styles.classes
         };
     }
 
@@ -75,7 +78,10 @@ components.forEach(componentPath => {
             return;
         }
 
-        writeFileSync(path.resolve(outputDirectory, `${kebabCase(reactAPI.name)}.json`), JSON.stringify(reactAPI));
+        writeFileSync(
+            path.resolve(outputDirectory, `${kebabCase(reactAPI.name)}.json`),
+            JSON.stringify(reactAPI)
+        );
 
         console.log('Extracted JSON for', componentPath);
     });
@@ -89,22 +95,25 @@ ensureExists(outputDirectory, 0o744, err => {
     }
 
     // Icons
-    const regex = /export { default as ([a-zA-Z]*) } from '[a-zA-Z./]*';/gm;
-    let iconArray = [];
-    const str = readFileSync(path.join(__dirname, '../core', 'icons.js'), 'utf-8');
-    let m;
-    while ((m = regex.exec(str)) !== null) {
-        // This is necessary to avoid infinite loops with zero-width matches
-        if (m.index === regex.lastIndex) {
-            regex.lastIndex++;
-        }
+    // const regex = /export { default as ([a-zA-Z]*) } from '[a-zA-Z./]*';/gm;
+    // let iconArray = [];
+    // const str = readFileSync(path.join(__dirname, '../core', 'icons.js'), 'utf-8');
+    // let m;
+    // while ((m = regex.exec(str)) !== null) {
+    //     // This is necessary to avoid infinite loops with zero-width matches
+    //     if (m.index === regex.lastIndex) {
+    //         regex.lastIndex++;
+    //     }
 
-        iconArray.push(m[1]);
-    }
+    //     iconArray.push(m[1]);
+    // }
 
-    writeFileSync(path.resolve(outputDirectory, `icons.json`), JSON.stringify(iconArray));
-    console.log('Extracted JSON for Icons');
+    // writeFileSync(path.resolve(outputDirectory, `icons.json`), JSON.stringify(iconArray));
+    // console.log('Extracted JSON for Icons');
 
-    writeFileSync(path.resolve(outputDirectory, `colors.json`), JSON.stringify(colors));
+    writeFileSync(
+        path.resolve(outputDirectory, `colors.json`),
+        JSON.stringify(colors)
+    );
     console.log('Extracted JSON for Colors');
 });

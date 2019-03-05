@@ -72,7 +72,7 @@ external makeProps:
     ~divider: bool=?,
     ~focusVisibleClassName: string=?,
     ~selected: bool=?,
-    ~value: 'union_r8en=?,
+    ~value: 'union_r51k=?,
     ~onFocus: ReactEvent.Focus.t => unit=?,
     ~onClick: ReactEvent.Mouse.t => unit=?,
     ~classes: Js.Dict.t(string)=?,

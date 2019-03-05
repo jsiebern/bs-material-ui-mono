@@ -29,8 +29,8 @@ module Classes = {
 [@bs.obj]
 external makeProps:
   (
-    ~action: 'any_rjs2=?,
-    ~buttonRef: 'union_rt4h=?,
+    ~action: 'any_rprf=?,
+    ~buttonRef: 'union_rcme=?,
     ~centerRipple: bool=?,
     ~className: string=?,
     ~disabled: bool=?,
@@ -51,7 +51,7 @@ external makeProps:
     ~onTouchMove: ReactEvent.Touch.t => unit=?,
     ~onTouchStart: ReactEvent.Touch.t => unit=?,
     ~role: string=?,
-    ~tabIndex: 'union_r91b=?,
+    ~tabIndex: 'union_rsp2=?,
     ~_TouchRippleProps: Js.t({..})=?,
     ~_type: string=?,
     ~classes: Js.Dict.t(string)=?,

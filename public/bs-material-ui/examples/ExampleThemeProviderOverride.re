@@ -43,7 +43,7 @@ let make = _ => {
       <div>
         <MuiThemeProvider theme>
           <Button color=`Secondary variant=`Outlined>
-            <MaterialUi_Icons.SupervisedUserCircle />
+            <ExampleIcons.Icons.SupervisedUserCircle_Filled />
             "Overriden Outline Styles"->ReasonReact.string
           </Button>
         </MuiThemeProvider>

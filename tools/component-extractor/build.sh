@@ -9,13 +9,13 @@ get_releases() {
 }
 
 # Update git repo
-if [ ! -d "./.mui-clone" ]; then
-  git clone https://github.com/mui-org/material-ui .mui-clone
+if [ ! -d "~/.mui-clone" ]; then
+  git clone https://github.com/mui-org/material-ui ~/.mui-clone
 fi
-cd ./.mui-clone
-git reset --hard
+cd ~/.mui-clone
 git checkout master
-git pull origin master
+git reset --hard
+git pull
 releases=$(get_releases mui-org/material-ui)
 select TAGNAME in $releases;
 do
@@ -26,13 +26,11 @@ do
   esac
 done
 git checkout $TAGNAME
-yarn install
 cd $pwd
 
 # Copy source files
 rm -rf ./core
-cp -R ./.mui-clone/packages/material-ui/src ./core
-cp -R ./.mui-clone/packages/material-ui-icons/src/index.js ./core/icons.js
+cp -R ~/.mui-clone/packages/material-ui/src ./core
 
 # Ensure output folder
 if [ ! -d "./../../output" ]; then
@@ -44,9 +42,9 @@ rm -rf ./../../output/json
 babel-node ./src/extract.js
 
 # Extract json schemas
-cd ./.mui-clone;
-typescript-json-schema ./tsconfig.json Theme --topRef --ignoreErrors --excludePrivate --required -o "${pwd}/../../output/json/theme.json"
+cd ~/.mui-clone;
+npx typescript-json-schema ./tsconfig.json Theme --topRef --ignoreErrors --excludePrivate --required -o "${pwd}/../../output/json/theme.json"
 echo "Extracted theme.json"
-typescript-json-schema ./tsconfig.json ThemeOptions --topRef --ignoreErrors --excludePrivate --required -o "${pwd}/../../output/json/theme-options.json"
+npx typescript-json-schema ./tsconfig.json ThemeOptions --topRef --ignoreErrors --excludePrivate --required -o "${pwd}/../../output/json/theme-options.json"
 echo "Extracted theme-options.json"
 cd $pwd

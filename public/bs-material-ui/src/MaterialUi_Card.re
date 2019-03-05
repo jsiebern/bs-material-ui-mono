@@ -25,7 +25,7 @@ external makeProps:
   (
     ~className: string=?,
     ~raised: bool=?,
-    ~elevation: 'number_p=?,
+    ~elevation: 'number_i=?,
     ~square: bool=?,
     ~classes: Js.Dict.t(string)=?,
     ~style: ReactDOMRe.Style.t=?,
